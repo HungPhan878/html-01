@@ -1,0 +1,43 @@
+/* common */
+:root {
+    --primary-color: #0f1b4c;
+}
+
+.content {
+    width: 1110px;
+    max-width: calc(100% - 48px);
+    /* khi man nho hon width kia se an theo max vaf cach hai ben 24px */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* btn */
+.btn {
+    display: inline-block;
+    padding: 14.5px 16px;
+    min-width: 98px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 21px;
+    /* identical to box height */
+    text-align: center;
+    color: #ffffff;
+    background: var(--primary-color);
+    border-radius: 12px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+/* dau ba cham */
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
