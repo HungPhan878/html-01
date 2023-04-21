@@ -143,16 +143,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 96px;
+    margin-top: 70px;
 }
 
-.clients .img_box {
-    /* width: 204px;
-    height: 91px; */
-    padding: 25px 41px 15px;
+.clients .img a {
+    display: flex;
+    align-items: center;
+    padding: 0 42px;
+    height: 90px;
     background: #ffffff;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
+}
+
+.clients .img a:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* guiders */
