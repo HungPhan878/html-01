@@ -331,7 +331,9 @@ body {
 
 .featured .list {
     margin-top: 70px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
     gap: 30px;
 }
 
@@ -634,7 +636,7 @@ body {
 
 .footer .row {
     display: flex;
-    gap: 185px;
+    column-gap: 185px;
 }
 
 .footer .heading {

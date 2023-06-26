@@ -93,22 +93,45 @@
         <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
         <link rel="stylesheet" href="./assets/css/base.css" />
         <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
+        <!-- pc -->
         <header class="fixed-header">
             <div class="content">
                 <nav class="navbar">
+                    <!-- menu -->
+                    <label for="menu-overlay" class="toggle-menu">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1em"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
                     <!-- logo -->
-                    <a href="#">
+                    <a href="#" class="navbar__logo">
                         <img src="./assets/image/Logo.svg" alt="besnik." />
                     </a>
                     <!-- navigation -->
-                    <ul>
+                    <ul class="navbar__list">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#service">Service</a></li>
                         <li><a href="#features">Features</a></li>
                         <li><a href="#listed">Listed</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <li class="show-on-mobie">
+                            <a id="show-on-mobie " class="separation" href="#!"
+                                >Sign in</a
+                            >
+                        </li>
+
+                        <li class="show-on-mobie"><a href="#!">Sign up</a></li>
                     </ul>
                     <!-- login -->
                     <div class="actions">
@@ -116,6 +139,32 @@
                         <a href="#!" class="btn action-btn">Sign up</a>
                     </div>
                 </nav>
+            </div>
+        </header>
+        <!-- mobile and tablet -->
+        <header class="menu-mobile">
+            <!-- check -->
+            <input
+                type="checkbox"
+                name=""
+                id="menu-overlay"
+                class="menu-checkbox"
+                hidden
+            />
+            <!-- over-lay -->
+            <label for="menu-overlay" class="menu-overlay"></label>
+            <!-- menu-drawer -->
+            <div class="menu-drawer">
+                <a href="#">
+                    <img src="./assets/image/Logo.svg" alt="besnik." />
+                </a>
+                <ul class="menu-list"></ul>
+                <script>
+                    const menuList = document.querySelector(".menu-list");
+                    const navbarList = document.querySelector(".navbar__list");
+
+                    menuList.innerHTML = navbarList.innerHTML;
+                </script>
             </div>
         </header>
         <!-- the main chi bao gom noi dung thoi -->
@@ -165,7 +214,9 @@
                         <p class="desc">
                             More than 45,000+ companies trust besnik
                         </p>
-                        <p class="desc">5 Star Ratings (2k+ Review)</p>
+                        <p class="desc hidden-mobile">
+                            5 Star Ratings (2k+ Review)
+                        </p>
                     </div>
                     <div class="img">
                         <a href="#!">
@@ -289,7 +340,7 @@
                             <p class="desc">
                                 Everything you need to know when you're looking
                             </p>
-                            <div class="featured-link">
+                            <div class="featured-link hidden-mobile">
                                 <a href="" class="link">
                                     <span class="span"
                                         >View All Properties</span
@@ -432,6 +483,11 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="view-link">
+                        <a href="#!" class="btn view-link show-on-mobie"
+                            >View All Properties</a
+                        >
                     </div>
                 </div>
             </div>
